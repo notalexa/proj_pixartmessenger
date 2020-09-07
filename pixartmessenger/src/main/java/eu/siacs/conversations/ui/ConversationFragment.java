@@ -1518,7 +1518,11 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
                     }
                     JitsiMeetUserInfo userInfos = new JitsiMeetUserInfo();
                     userInfos.setDisplayName(name);
-                    new JitsiMeetConferenceOptions.Builder().setUserInfo(userInfos).setRoom(videoRoom).build().launch(activity);
+                    new JitsiMeetConferenceOptions.Builder()
+	                    .setUserInfo(userInfos)
+	                    .setAudioMuted(false).setVideoMuted(true)
+	                    .setRoom(videoRoom).build()
+	                    .launch(activity);
                 }
                 break;
             case R.id.action_mediabrowser:

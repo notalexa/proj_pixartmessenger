@@ -14,7 +14,11 @@ The Jitsi call is generic and can be used in any app. Just include the two class
 
 into the project. Configure the options and call the `launch` method with an appropriate context:
 
-	new JitsiMeetConferenceOptions.Builder().setUserInfo(userInfos).setRoom(videoRoom).build().launch(activity);
+	new JitsiMeetConferenceOptions.Builder()
+	                    .setUserInfo(userInfos)
+	                    .setAudioMuted(false).setVideoMuted(true)
+	                    .setRoom(videoRoom).build()
+	                    .launch(activity);
 
 (taken from `ConversionFragment`).
 
