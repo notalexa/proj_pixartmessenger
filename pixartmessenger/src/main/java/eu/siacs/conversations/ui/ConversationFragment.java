@@ -1174,7 +1174,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
             if(conversation.getMucOptions()!=null&&conversation.getMucOptions().getRoomInfoForm().getFieldByName("muc#roomconfig_videoroom")!=null) {
                 menuConference.setVisible(true);
             } else {
-                menuMediaBrowser.setVisible(true);
+                menuConference.setVisible(false);
             }
             menuMediaBrowser.setVisible(true);
             menuNeedHelp.setVisible(false);
